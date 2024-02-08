@@ -36,4 +36,4 @@ async def prune_messages():
     await target_channel.send('all done :3')
 
 # Run the bot with your token
-bot.run(key)
+bot.run(botkey.key)
