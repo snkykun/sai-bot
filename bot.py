@@ -24,7 +24,7 @@ async def prune_messages():
 
     # Get the target channel using its ID
     target_channel = bot.get_channel(target_channel_id)
-    await target_channel.send('doggy')
+    await target_channel.send('doggy prune messages now :3')
 
     if target_channel:
         # Fetch messages in chunks and delete those older than 2 days with a delay
@@ -33,6 +33,7 @@ async def prune_messages():
             await asyncio.sleep(1)  # Add a delay of 1 second to stay within rate limits
     else:
         print(f"Error: Channel with ID {target_channel_id} not found.")
+    await target_channel.send('all done :3')
 
 # Run the bot with your token
 bot.run(key)
