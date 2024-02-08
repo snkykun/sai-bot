@@ -23,7 +23,7 @@ async def prune_messages():
     two_days_ago = current_time - timedelta(days=2)
 
     # Get the target channel using its ID
-    target_channel = bot.get_channel(target_channel_id)
+    target_channel = bot.get_channel(botky.target_channel_id)
     await target_channel.send('doggy prune messages now :3')
 
     if target_channel:
