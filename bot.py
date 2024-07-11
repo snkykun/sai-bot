@@ -29,5 +29,11 @@ async def prune_messages():
     else:
         print(f"Error: Channel with ID {target_channel_id} not found.")
     await target_channel.send('all done :3')
+    
+@client.command()
+async def servers(ctx):
+  servers = list(client.guilds)
+  await ctx.send(f"Connected on {str(len(servers))} servers:")
+  await ctx.send('\n'.join(guild.name for guild in servers))
 
 bot.run(botkey.key)
